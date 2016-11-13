@@ -1,0 +1,62 @@
+﻿@model Property_Management.Models.News
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="margin-top-bottom">
+            <h2>In this section, you can preview your news</h2>
+
+            <p>@Html.ActionLink("Back to all news", "Index")</p>
+        </div>
+
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Preview)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Preview)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedOn)
+            </dd>
+
+            @*
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureString)
+        </dd>
+            *@
+        </dl>
+
+
+
+    </div>
+</div>

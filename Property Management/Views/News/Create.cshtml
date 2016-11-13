@@ -1,0 +1,67 @@
+﻿@model Property_Management.Models.News
+<div class="container">
+    <div class="row">
+        <div class="margin-top-bottom">
+            <h2>Create news</h2>
+
+            <p>@Html.ActionLink("Back to all news", "Index")</p>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IsFeatured, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.CheckBoxFor(model => model.IsFeatured , new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.IsFeatured, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-8 col-sm-push-2">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+
+          </div>
+
+
+
+
+                @* --------IMPLEMENT PICTURE UPLOAD AT A LATER STAGE
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PictureString, htmlAttributes: new { @class = "control-label col-sm-2 col-sm-push-2" })
+                        <div class="col-sm-6 col-sm-push-2">
+                            @Html.EditorFor(model => model.PictureString, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PictureString, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                *@
+                }
+
+
+
+            </div>
+</div>

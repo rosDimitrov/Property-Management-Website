@@ -1,0 +1,20 @@
+﻿@{ 
+    Layout = null;
+}
+@model IEnumerable<Property_Management.Models.News>
+
+<div class="container">
+    <div class="row">
+        <h3> Featured News</h3>
+        @foreach (var item in Model)
+        {
+        <div class="col-sm-6">
+            <h3>@item.Title</h3>
+            <img src="" alt="Article image" />
+            <p>@item.Preview</p>
+            @Html.ActionLink("Read full article", "NewsList", new { id = item.NewsId })
+        </div>
+        }
+    </div>
+</div>
+    

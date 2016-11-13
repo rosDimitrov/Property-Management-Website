@@ -1,0 +1,199 @@
+﻿html{
+     position: relative;
+     height: 100%;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    position: relative;
+    height: 100%;
+}
+
+.row{
+    padding-left:0px;
+    padding-right:0px;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+.logo{
+        max-width:100px;
+        max-height:50px;
+    }
+.navbar{
+     padding:0px 0px;
+     margin:0px;
+}
+.navbar-header{
+    margin-left:20px;
+}
+.navbar a{
+    padding:0px;
+    margin-right:5px;
+}
+navbar-brand a{
+    width:100px;
+    height:100px;
+}
+
+/* -----------------Dropdown settings */
+
+.dropdown-menu {
+    background-color:#222222;
+}
+.dropdown-menu,.dropdown-menu > li{
+    background-color:#222222;
+}
+.dropdown-menu .divider{
+    background-color:#777;
+}
+.dropdown-menu > li > a{
+    color:#777;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.dropdown-menu > li > a:hover{
+  background-color:#080808;
+}
+
+
+.btn-info{
+    padding:10px 25px;
+}
+
+/* -----------------Swiper */
+.swiper-container {
+    width: 100%;
+    height: calc(100vh - 50px);
+}      
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide-inner{
+    margin:35vh auto;
+    height:30%;
+    width:50%;
+    text-align:center;
+    z-index:999999;
+    color:white;
+}
+
+
+/* Management Services setup*/
+.back-img{
+     background-image:url(/Content/images/services-bg.jpg);
+     background-position:center;
+     background-repeat:no-repeat;
+     background-size:cover;
+}
+
+.see-through{
+    color:#f7f7f2;
+    background:rgba(49,57,63,0.7);
+}
+
+.management-services{
+    color:#68b8cc;
+}
+#heading{
+     background:rgba(104, 184, 204,0.5);
+     color:#f7f7f2;
+}
+
+/* Pricing setup*/
+.pricing-img{
+     background-image:url(/Content/images/pricing-bg.jpg);
+     background-position:center;
+     background-repeat:no-repeat;
+     background-size:cover;
+}
+.inner-pricing{
+    color:white;
+}
+
+.see-through-pricing{
+    color:#f7f7f2;
+    background:rgba(49,57,63,0.7);
+    padding:25px;
+    margin-top:50px;
+    
+}
+
+/* Footer Settings */
+footer{
+    padding-top:30px;
+    margin:0px;
+    background-color:#222222;
+    color:white;
+
+}
+footer div{
+    padding-bottom:20px;
+    
+}
+
+/* Extra classes */
+
+.margin-top-bottom{
+    padding:40px 0px;
+}
+
+.margin-bottom-top-twenty{
+    padding-bottom:20px;
+    padding-top:20px;
+}
+
+.margin-bottom-extra{
+    padding-bottom:40px;
+}
+
+.margin-top{
+    padding-top:40px;
+}
+
+.margin-bottom{
+    padding-bottom:100px;
+}
+.form-group{
+    max-width:80vw;
+}
+
+.narrow{
+    width:75vw;
+    margin:0 auto;
+}
+
+
+.clients{
+    background-color:#4c5454;
+    color:white;
+
+}
+.contact-pic{
+    max-width:75vw;
+    height:auto;
+    
+}
+
+/* Specifics for the nav on bigger screen */
+@media (min-width:768px){
+   
+    .navbar{
+     overflow:visible;
+     height:50px;
+     padding:0px 0px;
+    }
+    .navbar-header{
+    margin-left:70px;
+}
+    .logo{
+        max-height:200px;
+        max-width:200px;
+    }
+    .contact-pic{
+    max-width:40vw;
+    height:auto;
+}
+
+}

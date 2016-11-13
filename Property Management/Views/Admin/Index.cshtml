@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-8 col-sm-push-2 margin-top-bottom">
+            <h2 class="">Welcome to the admin section of the website</h2>
+            <h3> What would you like to do</h3>
+            <div class="col-md-8">
+
+                <div> 
+                    <p>have to check what happens when user is registerded- not to log him.Also to add log-out button. Find out how it works with User CRUD</p> 
+                    @Html.ActionLink("Register New User", "Register")
+                </div>
+
+                <div>
+                    @Html.ActionLink("Manage News","Index","News")
+                </div>
+                
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+

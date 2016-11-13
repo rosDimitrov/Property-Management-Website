@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Property_Management.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container margin-top-bottom margin-bottom">
+    <div class="row">
+
+
+        @if (Model.Count() == 1)
+        {
+            
+            @Html.ActionLink("Back to All News", "NewsList","News", new { id = ""} ,htmlAttributes: new { @class = "col-sm-2" })
+             
+            foreach (var item in Model)
+            {
+
+                <div class="col-sm-10">
+                    <h3>@item.Title | @item.CreatedOn</h3>
+                    <img src="" alt="Article image" />
+                    <p>@item.Content</p>
+                </div>
+            }
+        }
+        else
+        {
+            <h2> Welcome to the news section of our website.</h2>
+            <h3> Here you can find useful information about property managenet</h3>
+            foreach (var item in Model)
+            {
+
+                <div class="col-sm-6">
+                    <h3>@item.Title | @item.CreatedOn</h3>
+                    <img src="" alt="Article image" />
+                    <p>@item.Preview</p>
+                    @Html.ActionLink("Read full article", "NewsList", new {id=item.NewsId})              
+                </div>
+            }
+        }
+
+    </div>
+</div>
+
+@*
+    @Html.ActionLink("Edit", "Edit", new { id=item.NewsId }) |
+    @Html.ActionLink("Details", "Details", new { id=item.NewsId }) |
+    @Html.ActionLink("Delete", "Delete", new { id=item.NewsId })
+*@

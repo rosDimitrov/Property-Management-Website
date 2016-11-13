@@ -1,0 +1,47 @@
+﻿@model Property_Management.Models.RegisterViewModel
+
+
+<div class="container margin-bottom">
+    <div class="row margin-top-bottom">
+
+        <h2 class="margin-top-bottom"> Create new user account</h2>
+        @Html.ActionLink("Back to Admin Home Page", "Index", "Admin", routeValues: null, htmlAttributes: new { @class = "text-center" })
+
+
+        @using (Html.BeginForm("Register", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-sm-2 col-sm-push-1 control-label" })
+                <div class="col-sm-6 col-sm-push-1">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-sm-2 col-sm-push-1 control-label" })
+                <div class="col-sm-6 col-sm-push-1">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-sm-2 col-sm-push-1 control-label" })
+                <div class="col-sm-6 col-sm-push-1">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-sm-10">
+                    <input type="submit" class="btn btn-default" value="Register" />
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

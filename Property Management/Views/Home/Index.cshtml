@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@*Swiper *@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide" style="background-image:url(../../Content/images/beautiful-sunset-images-196063.jpg)">
+            <div class="swiper-slide-inner">
+                <h1>Peace of mind for just 99$</h1>
+                <a href="@Url.Action("ManagementServices","Home")" class="btn btn-info">See all we do</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1000/1000/nightlife/2)"></div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+</div>
+
+@*Featured Properties*@
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">Featured Propeties</h1>
+        <div class="col-md-6 table-bordered">One</div>
+        <div class="col-md-6 table-bordered">Two</div>
+        <div class="col-md-6 table-bordered">Three</div>
+        <div class="col-md-6 table-bordered">Four</div>
+    </div>
+</div>
+    @*LInks for Owners and Residents*@
+
+<div class="container-fluid margin-top-bottom clients" >
+    <div class="row">
+       
+        <h1 class="text-center">We do what we do best. </h1>
+        <div class="col-sm-6 text-center">
+            <h2>Management Services</h2>
+            <a href="#" class="btn btn-info">See more</a>
+        </div>
+
+        <div class="col-sm-6 text-center">
+            <h2>Rental Services</h2>
+            <a href="#" class="btn btn-info">Find new home</a>
+        </div>   
+    </div>
+</div>
+
+    @*Featured News *@
+    @Html.Action("FeaturedNews", "News")
+
+    @*Partners Section*@
+    <div class="row">
+        <h2 class="text-center">I am a proud member of</h2>
+    </div>
+
+

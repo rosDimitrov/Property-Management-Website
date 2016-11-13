@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Property Management", "Property Management\Property Management.csproj", "{CBC9F096-4DB6-4CB0-B047-F6F1C29760F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{C2142C23-0D18-43E7-8C81-F6650BBD4197}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBC9F096-4DB6-4CB0-B047-F6F1C29760F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC9F096-4DB6-4CB0-B047-F6F1C29760F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC9F096-4DB6-4CB0-B047-F6F1C29760F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC9F096-4DB6-4CB0-B047-F6F1C29760F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2142C23-0D18-43E7-8C81-F6650BBD4197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2142C23-0D18-43E7-8C81-F6650BBD4197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2142C23-0D18-43E7-8C81-F6650BBD4197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2142C23-0D18-43E7-8C81-F6650BBD4197}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,71 @@
+﻿@model Property_Management.Models.EnquiryViewModel
+@{
+    ViewBag.Title = "About";
+}
+<div class="container-fluid margin-top margin-bottom-extra">
+    <div class="row">
+
+        <h2 class="text-center"> Bezzabo dete za prodan</h2>
+        <p class="narrow text-center margin-bottom-extra">lorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologrelorem ipsum dologre</p>
+
+        <div class="col-sm-5 col-sm-offset-1">
+            <img src="~/Content/images/Adelina.jpg" class="contact-pic" />
+        </div>
+        <div class="col-sm-5">
+            <p>
+                Give us a call at <a href="tel:+01-562-867-5309">1-562-867-5309</a><br />
+                -OR- <br />
+                Write to us
+            </p>
+
+
+            @*@Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            *@
+
+            <form class="form-horizontal" method="post">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        @Html.EditorFor(m => m.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
+                        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(m => m.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
+                        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        @Html.EditorFor(m => m.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = "Phone number" } })
+                        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <textarea class="form-control" rows="4" name="Message" placeholder="Your message" required></textarea>
+                        @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <button type="Submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

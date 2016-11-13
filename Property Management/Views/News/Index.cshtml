@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Property_Management.Models.News>
+<div class="container margin-bottom">
+    <div class="row">
+        <div class="margin-top-bottom col-sm-10 col-sm-push-2">
+            <h2>In this section, you can control your news</h2>
+
+            <p>@Html.ActionLink("Back to Admin Home Page", "Index", "Admin", routeValues: null, htmlAttributes: new {})</p>
+            <p>@Html.ActionLink("Create News", "Create")</p>
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m=>m.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Preview)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.IsFeatured)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.CreatedOn)
+                </th>
+                <th>
+                </th>
+            </tr>
+
+
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preview)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsFeatured)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                    </td>
+                    <td>
+                        
+                        @Html.ActionLink("Edit", "Edit", new {id=item.NewsId}) |
+                        @Html.ActionLink("Details","Details",new { id=item.NewsId}) |
+                        @Html.ActionLink("Delete","Delete",new { id=item.NewsId})
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

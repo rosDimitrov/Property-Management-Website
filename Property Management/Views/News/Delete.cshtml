@@ -1,0 +1,75 @@
+﻿@model Property_Management.Models.News
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="margin-top-bottom">
+            <h2>In this section, you can delete specific news</h2>
+
+            <p>@Html.ActionLink("Back to all news", "Index")</p>
+        </div>
+
+        <div>
+            <h4>Are you sure that you want to delete this ?</h4>
+            <hr />
+            <dl class="dl-horizontal">                 
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Preview)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Preview)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Content)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Content)
+                </dd>
+             
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsFeatured)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.IsFeatured)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+
+
+
+    </div>
+</div>
